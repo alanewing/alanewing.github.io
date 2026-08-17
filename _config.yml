@@ -1,7 +1,8 @@
 highlighter: rouge
 permalink: /blog/:year/:month/:day/:title/
 environment: prod
-url: "http://alan.github.io"  # Sitemap base URL.
+baseurl: "/alan.github.io"
+url: "https://alanewing.github.io"
 plugins:
   - jekyll-scholar
   - jekyll-sitemap
