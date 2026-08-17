@@ -1,0 +1,31 @@
+---
+---
+<div class="pub-item">
+  <div class="pub-title">
+    <strong>{{ entry.title }}</strong>
+  </div>
+
+  <div class="pub-authors">
+    {{ entry.author }}
+  </div>
+
+  <div class="pub-meta">
+    {% if entry.journal %}
+      <em>{{ entry.journal }}</em>{% if entry.year %}, {{ entry.year }}{% endif %}.
+    {% elsif entry.booktitle %}
+      <em>{{ entry.booktitle }}</em>{% if entry.year %}, {{ entry.year }}{% endif %}.
+    {% elsif entry.year %}
+      {{ entry.year }}.
+    {% endif %}
+
+    {% if entry.doi %}
+      [<a href="https://doi.org/{{ entry.doi }}" target="_blank" rel="noopener noreferrer">DOI</a>]
+    {% elsif entry.url %}
+      [<a href="{{ entry.url }}" target="_blank" rel="noopener noreferrer">Link</a>]
+    {% endif %}
+
+    {% if entry.code %}
+      [<a href="{{ entry.code }}" target="_blank" rel="noopener noreferrer">Code</a>]
+    {% endif %}
+  </div>
+</div>

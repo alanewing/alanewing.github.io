@@ -1,5 +1,12 @@
+*, body, h1, h2, h3, h4, h5, h6, p, a, li, span, div {
+    font-family: "Times New Roman", Times, serif !important;
+}
+
+code, pre, kbd, samp {
+    font-family: "Computer Modern Typewriter", "Courier New", Courier, monospace !important;
+}
+
 html {
-  font-family: -apple-system, Helvetica, arial, sans-serif;
   color: rgba(0, 0, 0, 0.8);
   line-height: 1.5em;
   -ms-text-size-adjust: 100%;
@@ -18,15 +25,7 @@ a {
 a:hover {
   text-decoration: none;
 }
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: -apple-system, Helvetica, arial, sans-serif;
-}
-h1 {
+h1, h2, h3, h4, h5, h6 {
   line-height: 1.2em;
 }
 .clear {
@@ -42,9 +41,9 @@ h1 {
 .mono {
   font-family: monospace;
 }
-.nav {
-  margin-top: 15px;
-  margin-bottom: 15px;
+.nav,
+.front-matter {
+    display: none !important;
 }
 .nav a {
   color: rgba(0, 0, 0, 0.6);
@@ -68,9 +67,6 @@ h1 {
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   border-top: 1px solid rgba(0, 0, 0, 0.1);
 }
-.front-matter h4 {
-  font-family: -apple-system, Helvetica, arial, sans-serif;
-}
 .front-matter .bylines .byline {
   margin-right: 20px;
   float: left;
@@ -78,7 +74,6 @@ h1 {
 .front-matter .bylines .byline h3,
 .front-matter .bylines .byline p {
   margin: 0;
-  font-family: -apple-system, Helvetica, arial, sans-serif;
 }
 .front-matter .bylines .byline h3 {
   font-size: 9px;
@@ -117,7 +112,7 @@ h1 {
   padding-top: 15px;
   display: inline-block;
   font-size: 13px;
-  line-heigh: 1.2em;
+  line-height: 1.2em;
 }
 .article .figure .caption-label {
   font-weight: bold;
@@ -210,4 +205,76 @@ hr {
   body {
     margin: 0 7px;
   }
+}
+
+/* Landing Page Layout */
+.landing-body {
+    height: 100vh;
+    margin: 0;
+}
+
+.center-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.landing-layout {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 48px;
+    transform: translate(-5vw, -4vh); /* Shifts left (-5vw) AND moves up (-4vh) */
+}
+
+.content-box {
+    text-align: left;
+    transform: none;
+}
+
+.profile-image-container {
+flex-shrink: 0;
+    margin-left: 50px;
+}
+
+.profile-image {
+    width: 180px;
+    height: auto;
+    display: block;
+}
+
+.nav-links {
+    line-height: 1.2;
+}
+
+.contact-email {
+    margin-top: 8px;
+}
+
+/* Bibliography Stacked Layout */
+#bibliography ol.bibliography,
+ol.bibliography {
+    list-style-type: none !important;
+    padding-left: 0 !important;
+    margin-left: 0 !important;
+}
+
+.pub-item {
+    margin-bottom: 1.5em;
+    line-height: 1.4em;
+}
+
+.pub-title {
+    font-size: 1.05em;
+}
+
+.pub-authors {
+    color: rgba(0, 0, 0, 0.8);
+}
+
+.pub-meta {
+    font-size: 0.95em;
+    color: rgba(0, 0, 0, 0.75);
 }
