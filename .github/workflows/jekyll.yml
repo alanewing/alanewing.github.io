@@ -27,6 +27,8 @@ jobs:
           bundler-cache: true
       - name: Setup Pages
         uses: actions/configure-pages@v5
+        with:
+          enable_reqs: false
       - name: Build with Jekyll
         run: bundle exec jekyll build
         env:
