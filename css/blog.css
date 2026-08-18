@@ -8,6 +8,14 @@
 
 @font-face {
     font-family: 'Neue Montreal';
+    src: url('../assets/fonts/neuemontreal-italic.otf') format('opentype');
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Neue Montreal';
     src: url('../assets/fonts/neuemontreal-bold.otf') format('opentype');
     font-weight: 700;
     font-style: normal;
@@ -223,12 +231,11 @@ hr {
   }
 }
 
-/* Landing Page Layout */
-.landing-body {
-    height: 100vh;
-    margin: 0;
+.landing-layout {
+    display: flex;
+    align-items: center; /* Options: 'center' (vertical middle) or 'flex-start' (top aligned) */
+    gap: 2.5rem;          /* Clean spacing between text and image */
 }
-
 .center-container {
     display: flex;
     justify-content: center;
@@ -245,22 +252,34 @@ hr {
     transform: translate(-5vw, -4vh); /* Shifts left (-5vw) AND moves up (-4vh) */
 }
 
-.content-box {
-    text-align: left;
-    transform: none;
+.content-box h1 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    line-height: 1.1;
+}
+
+.content-box h4 {
+    margin-top: 0;
+    margin-bottom: 1.5rem;
 }
 
 .profile-image-container {
-flex-shrink: 0;
-    margin-left: 50px;
+    display: flex;
+    align-items: center;
 }
 
 .profile-image {
-    width: 180px;
-    height: auto;
     display: block;
+    max-width: 200px; 
+    height: auto;
 }
 
+@media (max-width: 650px) {
+    .landing-layout {
+        flex-direction: column-reverse; 
+        align-items: flex-start;
+    }
+}
 .nav-links {
     line-height: 1.2;
 }
@@ -269,7 +288,6 @@ flex-shrink: 0;
     margin-top: 8px;
 }
 
-/* Bibliography Stacked Layout */
 #bibliography ol.bibliography,
 ol.bibliography {
     list-style-type: none !important;
