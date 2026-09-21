@@ -1,3 +1,4 @@
+future: true
 highlighter: rouge
 permalink: /blog/:year/:month/:day/:title/
 environment: prod
