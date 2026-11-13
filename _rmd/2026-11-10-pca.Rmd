@@ -23,7 +23,7 @@ Suppose we have a $$n$$ vectors $$X_1,\ldots, X_n\in\mathbb{R}^p$$. I'll assume 
 
 $$
 \begin{align*}
- 	\mathbf{X} = \begin{pmatrix}X_1^\top \\ \vdots \\ X_n^\top)\end{pmatrix}\in\mathbb{R}^{n\times p}.
+ 	\mathbf{X} = \begin{pmatrix}X_1^\top \\ \vdots \\ X_n^\top\end{pmatrix}\in\mathbb{R}^{n\times p}.
 \end{align*}
 $$
  
