@@ -11,3 +11,5 @@ I am going to try to commit a few hours a week to learning Stan. I hear it refer
 One day, I will change this document's title to "Stan overview." When that will be, who knows.
 
 ---
+
+Stan is a probabilistic programming language widely used for Bayesian inference. 
